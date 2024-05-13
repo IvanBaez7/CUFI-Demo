@@ -1,0 +1,592 @@
+:root {
+  --main-blue: rgb(9, 54, 144);
+  --2blue: rgb(33, 102, 241);
+  --donate: linear-gradient(45deg, red, white, blue);
+  --transition: all 0.3s linear;
+}
+
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul,
+a {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+p {
+  font-size: 0.75rem;
+  justify-content: center;
+  /* padding-right: 42px; */
+}
+
+#up p {
+  padding-right: 42px;
+}
+
+#up {
+  display: flex;
+  justify-content: space-between;
+  height: 135px;
+  background-color: rgb(243, 246, 249);
+  align-items: center;
+  text-align: center;
+  border-bottom: 0.5px solid rgba(21, 27, 35, 0.092);
+}
+
+header > img {
+  margin-left: 10px;
+}
+
+.donate-btn a {
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--main-blue);
+}
+
+.donate-btn {
+  position: fixed;
+  top: 5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  padding: 3px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: var(--main-blue);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.donate-btn:hover {
+  color: rgb(1, 27, 73);
+  background: var(--donate);
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-blue);
+  font-size: 2.5rem;
+  margin: 0 auto;
+  padding-right: 42px;
+  /* font-weight: bold; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+  word-spacing: 5px;
+}
+
+.title p {
+  font-size: 8px;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--main-blue);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  color: rgb(196, 168, 10);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.close-btn {
+  font-size: 1.85rem;
+  background: transparent;
+  border-color: transparent;
+  color: rgb(196, 168, 10);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--main-blue);
+  transform: scale(1.1);
+}
+
+.logo {
+  justify-content: center;
+  height: 100px;
+}
+
+.links a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  color: rgb(3, 56, 108);
+  transition: var(--transition);
+}
+
+.links a:hover {
+  background: rgb(137, 162, 231);
+  color: black;
+}
+
+/* ****************** */
+/* links2 reminder to style with a hover effect that will display them */
+/* ****************** */
+
+.links2 {
+  display: none;
+}
+
+.submenu {
+  position: relative;
+}
+
+.links2 a {
+  font-size: 1.5rem;
+
+  color: rgb(3, 56, 108);
+}
+
+.links2 a:hover {
+  background-color: rgba(196, 168, 10, 0.711);
+  color: black;
+  border-radius: 4px;
+}
+
+.social-icons {
+  justify-self: center;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.social-icons a i {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--main-blue);
+  transition: transform 0.3s ease;
+}
+
+.social-icons a i:hover {
+  color: rgb(196, 168, 10);
+  transform: scale(1.1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(205, 227, 245);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  /* box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); */
+  transition: var(--transition);
+  transform: translate(-100%);
+  overflow-y: scroll;
+  z-index: 9999;
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.new-sidebar {
+  position: fixed;
+  top: 0;
+  left: 100%; /* Ensure it's positioned beside the existing sidebar */
+  width: 250px;
+  height: 100vh;
+  background: rgba(1, 67, 120, 0.626);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  transition: all 0.3s ease;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+.new-sidebar .new-links {
+  padding: 1rem;
+}
+
+.new-sidebar .new-links a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.75rem 0;
+  margin-top: 2rem;
+  color: rgb(235, 243, 251);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.new-sidebar .new-links a:hover {
+  background: rgba(196, 168, 10, 0.867);
+  color: black;
+  border-radius: 4px;
+  padding-left: 20px;
+}
+
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .sidebar {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  .show-sidebar {
+    transform: translateX(0);
+  }
+
+  .links a {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .links2 {
+    display: none; /* Hide links2 by default */
+    position: relative;
+  }
+
+  .submenu.active .links2 {
+    display: block; /* Show links2 when submenu is active */
+  }
+
+  .donate-btn {
+    font-size: 17px;
+    right: 2rem;
+  }
+}
+
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+/******* navbar *******/
+
+/******* footer *******/
+/******* footer *******/
+/******* footer *******/
+/******* footer *******/
+/******* footer *******/
+/* Footer container */
+
+footer {
+  background-color: var(--main-blue);
+  color: #e4effb;
+  /* padding: 30px; */
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('USISRAELFlag.webp');
+  background-size: 30rem;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.tint {
+  background-color: rgba(10, 75, 155, 0.809);
+  width: 100vw;
+  height: auto;
+
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+/* Heading and paragraph styles */
+footer h5 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+footer p.footer {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+button.join {
+  display: inline-block;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding: 12px 24px;
+  background: var(--donate);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+button.join:hover {
+  transform: scale(1.05); /* Scale the button slightly on hover */
+}
+
+.join > a {
+  color: rgb(29, 29, 36);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+footer .join:hover {
+  background-color: var(--2blue);
+}
+
+/* Social media icons */
+footer .social-footer {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .social-footer li {
+  margin-right: 15px;
+}
+
+footer .social-footer a {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Increase width by 10px */
+  height: 50px; /* Increase height by 10px */
+  background-color: #444;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px; /* Increase icon size */
+  transition: background-color 0.3s ease;
+}
+
+footer .social-footer a:hover {
+  background-color: rgb(196, 168, 10);
+}
+
+/* Modal styles */
+
+#openModalBtn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #e4effb;
+  cursor: pointer;
+}
+
+.sitemap-links > a {
+  font-size: 20px;
+  color: #e4effb;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+footer .modal {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 2rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  overflow: auto;
+}
+
+footer .modal-content {
+  background-color: rgba(135, 174, 207, 0.948);
+  margin: 10% auto;
+  padding: 20px;
+  color: #e4effb;
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+  text-align: left;
+}
+
+footer .modal-content ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+footer .modal-content ul li {
+  margin-bottom: 10px;
+}
+
+footer .modal-content li a {
+  color: var(--main-blue);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+footer .modal-content li a:hover {
+  color: rgb(196, 168, 10);
+}
+
+/* Close button for modal */
+footer .close {
+  position: absolute;
+  color: orangered;
+  top: 10px;
+  right: 20px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+footer .close:hover {
+  color: rgb(255, 166, 0);
+}
+
+.top-link {
+  display: none; /* Hide initially */
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  background: rgb(196, 168, 10);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  text-decoration: none;
+  z-index: 999;
+  /* animation: bounce 3s ease-in-out infinite; */
+}
+
+.top-link:hover {
+  color: var(--2blue);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0 auto;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  padding: 20px;
+
+  z-index: 1000;
+}
+
+.popup img {
+  max-width: 100%;
+  height: auto;
+}
+
+.popup-close {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  font-size: 27px;
+  color: orangered;
+  cursor: pointer;
+  transition: translate 3s ease-in-out;
+}
+
+.popup-close:hover {
+  color: gold;
+  transform: scale(1.5);
+}
+
+/* Copyright text */
+footer .copyright {
+  font-size: 17px;
+  margin-top: 55px;
+  background: linear-gradient(45deg, rgb(248, 26, 26), white, rgb(46, 46, 247));
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer .modal-content {
+    width: 60%;
+    height: 100%;
+    line-height: 2rem;
+    overflow-y: scroll;
+  }
+  .popup {
+    width: 95%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .popup-close {
+    top: 13px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .join {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

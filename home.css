@@ -1,0 +1,433 @@
+:root {
+  --main-blue: rgb(9, 54, 144);
+  --2blue: rgb(33, 102, 241);
+  --donate: linear-gradient(45deg, red, white, blue);
+  --transition: all 0.3s linear;
+  --text-color: #181919;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url(newflag.jpeg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: #f8f9fa;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  align-items: center;
+  color: #181919;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  color: #181919;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-content p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-content {
+  background: rgba(240, 242, 248, 0.285);
+  height: 400px;
+  padding-top: 40px;
+  width: 800px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.join-button {
+  display: inline-block;
+  padding: 15px 30px; /* Larger button padding */
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: var(--main-blue);
+}
+
+/* mission section styling */
+.mission {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.mission h3 a {
+  color: var(--main-blue);
+}
+
+.mission h3 {
+  font-size: 27px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* .mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+p.mission-statement {
+  font-size: 18px;
+  color: #181919;
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 170px auto;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.mission p {
+  font-size: 18px;
+  color: #181919;
+  line-height: 2rem;
+  margin-bottom: 120px;
+}
+
+/* Style the founders section */
+.founders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px; /* Spacing between file elements */
+}
+
+/* Style each file container */
+.file {
+  width: 30%;
+  padding: 20px;
+  height: 750px;
+  background-color: #0f76eb2d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.165);
+}
+
+/* Style file image */
+.file img {
+  width: 100%; /* Ensure image fills the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Style file details */
+
+p.file-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 0;
+}
+
+.file-title {
+  font-style: italic;
+  font-size: 14px;
+  color: #555;
+  display: block;
+}
+
+p.file-speech {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: rgb(76, 82, 96);
+  line-height: 1.5;
+}
+
+/* About section styles */
+.about-section {
+  padding: 180px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  color: var(--main-blue);
+  margin-bottom: 30px; /* Increased margin for separation */
+}
+
+.about-section p {
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 1.6rem;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 12px 24px; /* Larger button padding */
+  background-color: var(--main-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+}
+
+.learn-more-button:hover {
+  background-color: var(--2blue); /* Darker green on hover */
+}
+
+/* Style for summit section */
+.summit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  background-color: #02101d;
+  color: azure;
+}
+
+.summit img {
+  max-width: 100%; /* Ensure the image stays within its container */
+  margin-bottom: 20px;
+  margin-top: 90px;
+}
+
+.summit-text {
+  font-size: 18px;
+  color: azure;
+  line-height: 1.6;
+  margin-bottom: 60px; /* Spacing below the text paragraph */
+}
+
+.summit-btn {
+  padding: 12px 24px;
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 90px;
+  font-size: 16px;
+  text-decoration: none; /* Remove underline for button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.summit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style the ad campaign section */
+.ad-campaign {
+  padding: 50px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.ad-campaign p {
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-top: 70px;
+}
+
+.ad-campaign iframe {
+  width: 100%; /* Full width within its container */
+  max-width: 800px; /* Limit maximum width for responsiveness */
+  height: 400px; /* Fixed height for video */
+  margin: 170px auto;
+  display: block;
+}
+
+/* Style the testimonials section */
+.testimonials {
+  background-color: rgb(251, 250, 249); /* Light gray background */
+  text-align: left; /* Align text to the left */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the image */
+.testimonials img {
+  width: 700px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add space between image and text */
+}
+
+/* Style the blockquote */
+.testimonials blockquote {
+  font-family: cursive; /* Use cursive font */
+  font-size: 18px;
+  color: #333; /* Dark gray text color */
+  margin-right: 190px;
+  margin-bottom: 20px; /* Add space below the quote */
+}
+
+/* Style the quote */
+.testimonials q {
+  font-style: italic; /* Italicize the quote */
+  font-family: cursive;
+}
+
+.quotations {
+  display: block;
+}
+
+/* Style the citation */
+.testimonials cite {
+  font-weight: bold;
+  font-size: 16px;
+  color: #555; /* Light gray text color */
+  margin-top: 10px;
+}
+
+/* Style the position/title */
+.testimonials h6 {
+  font-family: cursive; /* Use cursive font */
+  font-size: 14px;
+  color: #555; /* Light gray text color */
+  margin-top: 10px; /* Add space above the position/title */
+}
+
+/* .testimonials {
+  position: relative;
+} */
+
+.testimonial {
+  display: none;
+}
+
+.testimonial.active {
+  display: flex;
+  background-color: rgb(251, 250, 249); /* Light gray background */
+  text-align: left; /* Align text to the left */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  width: 100vw;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.navigation-buttons button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 2px solid #129ff6;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button.active {
+  background-color: var(--main-blue);
+}
+
+@media only screen and (max-width: 768px) {
+  .founders {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .file {
+    width: 90%; /* Take up 90% of the container width */
+    margin: 10px auto; /* Center horizontally with margin */
+    text-align: center;
+  }
+
+  .file img {
+    width: 100%; /* Ensure images fill the width of their container */
+    max-width: 300px; /* Optional: Limit maximum image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images are block elements */
+    margin: 0 auto 10px; /* Center images with bottom margin */
+  }
+
+  .file p,
+  .file-name {
+    margin-bottom: 10px; /* Add spacing below paragraphs */
+  }
+
+  .file-name {
+    font-weight: bold; /* Optionally emphasize file name */
+  }
+
+  .file-title {
+    font-style: italic; /* Optionally italicize file title */
+  }
+
+  .ad-campaign {
+    padding: 30px;
+  }
+
+  .ad-campaign p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .ad-campaign iframe {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+
+  .testimonials {
+    display: block;
+  }
+
+  .testimonial.active {
+    display: block;
+  }
+
+  .quotations {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .testimonials blockquote {
+    margin-right: 0;
+    line-height: 1.5rem;
+  }
+
+  /* Adjust margin for the image on smaller screens */
+  .testimonials img {
+    margin-bottom: 10px;
+    width: 400px;
+  }
+}

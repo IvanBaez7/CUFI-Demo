@@ -1,0 +1,163 @@
+:root {
+  --main-blue: rgb(9, 54, 144);
+  --2blue: rgb(33, 102, 241);
+  --donate: linear-gradient(45deg, red, white, blue);
+  --transition: all 0.3s linear;
+  --text-color: #181919;
+}
+
+.mission {
+  background-image: url(https://cufi.org/wp-content/uploads/2020/07/sketch2.jpg);
+  background-position: center;
+  /* background-repeat: repeat-x; */
+  background-size: contain;
+  height: auto;
+  padding: 90px 40px 190px;
+  justify-content: center;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 80px;
+  color: var(--main-blue);
+  text-align: left;
+}
+
+.mission p {
+  line-height: 1.5rem;
+  font-size: 15px;
+  color: var(--text-color);
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+/* video modal */
+#videoTrigger {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  #videoTrigger {
+    max-width: 90%; /* Set maximum width for small screens */
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #4693f663;
+  margin: auto; /* Center the modal vertically and horizontally */
+  padding: 60px;
+  border-radius: 8px;
+}
+
+iframe {
+  width: 100%; /* Set the width of the iframe to 100% */
+  height: 500px; /* Adjust the height as needed */
+  border: none; /* Remove border */
+}
+
+.close {
+  color: #f6f7f8;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p.donate-p {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-color);
+  border-bottom: solid 2px red;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 60;
+  padding-bottom: 20px;
+}
+
+.donate-ww a {
+  color: #fff;
+}
+
+.donate-ww a:hover {
+  color: var(--text-color);
+}
+
+.donate-ww {
+  display: inline-block;
+  background-color: var(--2blue);
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.donate-ww:hover {
+  background: var(--donate);
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between grid items */
+}
+
+.grid-tab {
+  width: 390px;
+  height: 390px;
+  text-align: center; /* Center content horizontally */
+}
+
+.grid-tab img {
+  width: 390px;
+  /* height: 190px; */
+  height: 55%;
+  border-radius: 10px; /* Add rounded corners to images */
+}
+
+.grid-btn {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.grid-btn a {
+  color: #ffffff; /* Set link text color */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.grid-btn:hover {
+  background-color: var(--2blue);
+}
